@@ -1,21 +1,31 @@
-# Python
+# === Python-related ===
 __pycache__/
 *.py[cod]
+*.pyo
 *.log
 
-# Virtual Environments
-.env
+# === Django-related ===
+db.sqlite3                
+media/                    
+static/                   
+
+# === Environment & Secrets ===
+.env                      
+.env.local
+.env.*.local
+
+# === Virtual Environments ===
 .venv/
 venv/
+ENV/
+env/
 
-# Django specific
-db.sqlite3
-/media
-/static
-
-# IDE files
+# === IDEs & Tools ===
 .vscode/
 .idea/
 
-# macOS
-.DS_Store
+# === Migrations Cache ===
+**/migrations/__pycache__/
+
+# === OS-specific ===
+Thumbs.db                 
