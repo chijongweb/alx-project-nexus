@@ -89,3 +89,6 @@ feat: add CRUD APIs for products and categories
 feat: enable filtering, sorting, and pagination
 perf: add indexing and query optimizations
 docs: add Swagger documentation for API usage
+
+
+### ERD  link https://drive.google.com/drive/folders/1dwA87T26l8MsIjnN2F6GJZOaKU5be-__?usp=sharing
