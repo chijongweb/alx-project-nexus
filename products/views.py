@@ -7,7 +7,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-    # Enable filtering by category (assuming category field is 'category__product_name' or 'category__slug')
+    
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     filterset_fields = ['category__product_name', 'category__category_slug']  # adjust field as needed
     ordering_fields = ['product_price', 'product_created_at']  # fields that can be sorted
