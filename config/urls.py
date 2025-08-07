@@ -43,6 +43,7 @@ urlpatterns = [
 
     # Admin
     path('admin/', admin.site.urls),
+    path('api/users/', include('users.urls')), 
 
     # Auth
     path('api/register/', RegisterView.as_view(), name='register'),
