@@ -182,7 +182,7 @@ SWAGGER_SETTINGS = {
             'type': 'apiKey',
             'name': 'Authorization',
             'in': 'header',
-            'description': 'JWT Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0NTQwMDI5LCJpYXQiOjE3NTQ1Mzk3MjksImp0aSI6IjlmMThjZjdmNjdmYjQxNzY4N2Y2NmI3OTlkYmY4ZTY2IiwidXNlcl9pZCI6IjEifQ.JWWbFVknNx5TktYZg5D048SpYCccTmJrforO2c6b7Y8'
+            'description': 'JWT Authorization: Bearer '
         }
     }
 }
