@@ -25,6 +25,12 @@ jobs:
           --health-timeout=5s
           --health-retries=5
 
+    env:
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      DEBUG: 'True'
+      ALLOWED_HOSTS: 'localhost,127.0.0.1'
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
+
     steps:
       - uses: actions/checkout@v3
 
@@ -39,13 +45,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run migrations
-        env:
-          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
-        run: |
-          python manage.py migrate
+        run: python manage.py migrate
 
       - name: Run tests
-        env:
-          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
-        run: |
-          python manage.py test
+        run: python manage.py test
