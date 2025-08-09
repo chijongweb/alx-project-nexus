@@ -10,3 +10,4 @@ tzdata==2025.2
 djangorestframework-simplejwt
 drf-yasg
 gunicorn==20.1.0
+setuptools
