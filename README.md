@@ -89,3 +89,7 @@ The E-Commerce Backend project simulates the development of a production-grade b
 
 View all here:  
 [https://drive.google.com/drive/folders/1dwA87T26l8MsIjnN2F6GJZOaKU5be-__?usp=sharing](https://drive.google.com/drive/folders/1dwA87T26l8MsIjnN2F6GJZOaKU5be-__?usp=sharing)
+
+## Hosted App
+
+[ALX Project Nexus on Render](https://alx-project-nexus-4qyo.onrender.com/)
