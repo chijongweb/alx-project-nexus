@@ -22,21 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-yikjy$ac5&(h=et=#wv=3--)0&*jal+i99ov8#wk&c8gd5m-(v'
+
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
 ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS if host.strip()]
-# SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-#DEBUG = config('DEBUG', cast=bool)
-
-#if DEBUG:
- #   ALLOWED_HOSTS = []
-#else:
-  #  ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost').split(',')
-
-#ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -158,7 +148,7 @@ REST_FRAMEWORK = {
     ),
 
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',  # protects by default, can override per view
+        'rest_framework.permissions.IsAuthenticated',  
     ),
 
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
