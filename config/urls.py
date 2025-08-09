@@ -31,7 +31,7 @@ schema_view = get_schema_view(
         default_version='v1',
         description="API documentation for the E-Commerce backend with JWT authentication",
         terms_of_service="https://www.example.com/terms/",
-        contact=openapi.Contact(email="support@example.com"),
+        contact=openapi.Contact(email="bchijongwe1@gmail.com"),
         license=openapi.License(name="MIT License"),
     ),
     public=True,
@@ -51,6 +51,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
     # App routes
+    path('accounts/', include('django.contrib.auth.urls')),
     path('api/users/', include('users.urls')),
     path('api/products/', include('products.urls')),
     path('api/categories/', include('categories.urls')),
