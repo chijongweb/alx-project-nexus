@@ -1,8 +1,16 @@
-from django.http import JsonResponse
+from django.http import HttpResponse
 
 def welcome(request):
-    return JsonResponse({
-        'message': 'Welcome to the E-Commerce API !!',
-        'swagger_url': '/swagger/',
-        'docs_url': '/docs/'
-    })
+    html_content = """
+    <html>
+      <head><title>Welcome to E-Commerce API</title></head>
+      <body>
+        <h1>Welcome to the E-Commerce API !!</h1>
+        <p>
+          <a href="/swagger/">Swagger UI</a><br>
+          <a href="/docs/">API Documentation</a>
+        </p>
+      </body>
+    </html>
+    """
+    return HttpResponse(html_content)
