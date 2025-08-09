@@ -93,3 +93,6 @@ View all here:
 ## Hosted App
 
 [ALX Project Nexus on Render](https://alx-project-nexus-4qyo.onrender.com/)
+
+**Presentation Slides:**  
+[Google Slides Link](https://docs.google.com/presentation/d/1jgBb8NzNdPdb1gqxF7XJOyQjjKJjLug3/edit?usp=drive_link&ouid=102997720211753211215&rtpof=true&sd=true)
