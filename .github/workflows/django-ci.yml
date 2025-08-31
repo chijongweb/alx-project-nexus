@@ -41,25 +41,17 @@ jobs:
       - name: Run migrations
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          DEBUG: 'True'
-          ALLOWED_HOSTS: 'localhost,127.0.0.1'
-          DB_NAME: test_db
-          DB_USER: postgres
-          DB_PASSWORD: postgres
-          DB_HOST: localhost
-          DB_PORT: 5432
+          DEBUG: "True"
+          ALLOWED_HOSTS: "localhost,127.0.0.1"
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
         run: |
           python manage.py migrate
 
       - name: Run tests
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          DEBUG: 'True'
-          ALLOWED_HOSTS: 'localhost,127.0.0.1'
-          DB_NAME: test_db
-          DB_USER: postgres
-          DB_PASSWORD: postgres
-          DB_HOST: localhost
-          DB_PORT: 5432
+          DEBUG: "True"
+          ALLOWED_HOSTS: "localhost,127.0.0.1"
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
         run: |
           python manage.py test
